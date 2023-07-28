@@ -10,6 +10,7 @@
 
 .html {
   font-size: 62.5%;
+  margin: 0;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
   text-decoration: none;
   border-radius: 50px;
   cursor: pointer;
-  outline: none;
+  outline: none;  
   margin-top: 1em;
   text-transform: uppercase;
   font-weight: small;
@@ -46,9 +47,33 @@ body {
   transition: background 0.3s ease-in-out;
 }
 
-/* ............/navbar/............ *
 
-/* desktop mode............/// */
+
+
+
+.btn2 {
+  display: inline-block;
+  padding: 0.2em 0.7em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;  
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btn2-primary {
+  color: #fff;
+  background: #16a083;
+}
+
+.btn2-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
+
+
 
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
@@ -197,14 +222,14 @@ body {
 /* ..........////Food category///........... */
 
 #food {
-  padding: 5rem 0 10rem 0;
+  padding: 5rem 0 5rem 0;
 }
 
 #food h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 40px;
+  margin-bottom:  0px;
   text-transform: uppercase;
   color: #555;
 }
@@ -236,7 +261,7 @@ body {
   opacity: 0;
   z-index: 2;
   text-align: center;
-  transition: all 0.3s ease-in-out 0.1s;
+  
 }
 
 .img-content h3 {
@@ -278,6 +303,7 @@ body {
 /* .........../Food Menu/............ */
 
 .food-menu-heading {
+  padding-top: 45px;
   text-align: center;
   font-size: 3.4rem;
   font-weight: 400;
@@ -396,6 +422,32 @@ body {
   object-fit: cover;
 }
 
+#location{
+  padding-top: 50px;
+  padding-bottom: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.div2, iframe {
+  width: 450px;
+  height: 300px;
+  margin: 70 auto;
+  background-color: #f5f5f7;
+
+}
+
+iframe {
+  display: block;
+  border-style:none;
+  
+}
+
+
 .form-container {
   padding: 1rem;
   width: 50%;
@@ -432,24 +484,93 @@ body {
   color: #444;
   margin-bottom: 1rem;
   margin-top: -1.2rem;
+  
 }
 
 .form-container a {
   font-size: 1.3rem;
 }
 
-#footer h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  padding: 2.6rem;
-  font-weight: 500;
-  color: #fff;
-  background: rgb(65, 65, 65);
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 20px 50px;
 }
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 50px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  padding-top: 5px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{  transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:none;}
+
+
+
+
+
 
 /* ......../ media query /.......... */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .navbar {
     opacity: 0.95;
   }
@@ -515,7 +636,7 @@ body {
     padding-top: 100px;
     background: #fff;
     height: 100vh;
-    max-width: 300px;
+    max-width: 100%;
     transform: translate(-150%);
     display: flex;
     flex-direction: column;
@@ -638,5 +759,15 @@ body {
 @media (orientation: landscape) and (max-height: 500px) {
   .showcase-area {
     height: 50vmax;
+  }
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
   }
 }
